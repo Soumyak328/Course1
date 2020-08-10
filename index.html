@@ -231,6 +231,14 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -303,70 +311,6 @@
             </div>
         </div>
         
-        <!-- <div class="card col-12 col-md-8 offset-sm-2 align-self-center" id="index-form" style="margin-bottom: 25px;padding: 0%;">
-            <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-            <div class="card-body">
-                <form>
-                    <div class="form-group row">
-                        <p class="col-12 col-sm-2" style="margin-left: 10px;">Number of Guests</p>
-                        <label class="radio-inline" style="margin-left: 10px;">
-                        <input type="radio" name="optradio" checked style="margin-left: 10px; margin-right: 5px;">1
-                        </label>
-                        <label class="radio-inline" style="margin-left: 10px;margin-right: 5px;">
-                        <input type="radio" name="optradio" style="margin-left: 10px;margin-right: 5px;">2
-                        </label>
-                        <label class="radio-inline" style="margin-left: 10px;margin-right: 5px;">
-                        <input type="radio" name="optradio" style="margin-left: 10px;margin-right: 5px;">3
-                        </label>
-                        <label class="radio-inline" style="margin-left: 10px;margin-right: 5px;">
-                        <input type="radio" name="optradio" style="margin-left: 10px;margin-right: 5px;">4
-                        </label>
-                        <label class="radio-inline" style="margin-left: 10px;margin-right: 5px;">
-                        <input type="radio" name="optradio" style="margin-left: 10px;margin-right: 5px;">5
-                        </label>
-                        <label class="radio-inline" style="margin-left: 10px;margin-right: 5px;">
-                        <input type="radio" name="optradio" style="margin-left: 10px;margin-right: 5px;">6
-                        </label>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <label for="SectionsRadio" class="col-sm-2 control-label" style="margin-left:10px">Section</label>
-                        <div id="SectionsRadio" class="col-sm-9">
-                            
-                            <div class="btn-group" data-toggle="buttons">
-                               <label class="btn btn-success active" style="margin-left: 10px;">
-                                 <input type="radio" name="section" id="non-smoking" autocomplete="off" checked> Non-smoking
-                               </label>
-                               <label class="btn btn-danger">
-                                 <input type="radio" name="section" id="smoking" autocomplete="off"> Smoking
-                               </label>
-                               
-                             </div>
-                            
-                         </div>
-                    </div>
-                    
-                    <div class="form-group row">
-                        <p class="col-12 col-md-2 col-form-label" style="margin-left: 10px;">Date and Time</p>
-                        <div class="col-12 col-md-4">
-                            <input type="date" class="form-control" id="date" name="date"
-                                placeholder="Date" style="margin-left: 10px;">
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <input type="time" class="form-control" id="time" name="time"
-                                placeholder="Time" style="margin-left: 10px;">
-                        </div>
-                    </div>
-                </form>
-
-                <div class="form-group row" >
-                    <div class="col-12 col-sm-2 offset-sm-2">
-                        <button type="submit" class="btn btn-primary" style="margin-left: 30px;">
-                            Reserve
-                        </button>
-                    </div>
-                </div>
-            </div>
         
 
             
@@ -427,6 +371,16 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
+
+        $(document).ready(function(){
+            $('#mycarousel').carousel({interval:2000});
+            $('#carousel-pause').click(function(){
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function(){
+                $('#mycarousel').carousel('cycle');
+            });
+        })
     </script>
 </body>
 
